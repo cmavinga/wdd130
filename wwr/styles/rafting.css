@@ -68,9 +68,10 @@ nav, p, section, article {
 
 .hero article {
     position: absolute;
+    float: right;
     bottom: 30%;
     width: 100px;
     left: 10%;
-    color: #f1faee;
+    color: var(--secondary-color);
 }
 
