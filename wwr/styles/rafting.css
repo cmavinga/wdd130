@@ -1,0 +1,76 @@
+:root {
+  --primary-color: #1d3557;   /* deep navy */
+  --secondary-color: #457b9d; /* muted blue */
+  --accent1-color: #a8dadc;   /* soft cyan */
+  --accent2-color: #f1faee;   /* off-white */
+  --heading-font: "Time New Roman", sherif;
+  --body-font: "Arial"
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style the entire document body text content to use the body-font CSS variable. Also add a CSS declaration to set the text color for the content. */
+
+body {
+    font: var(--body-font);
+    color: var(--accent2-color);
+}
+
+/* Limit the page width by combining the header, main, and footer elements and center the content on the display using an auto left-right margin. */
+
+/* This CSS selector header, main, footer { targets three different HTML elements simultaneously by using a comma to specify each of these child elements of the document body. */
+
+/* Style the headings (all or just those you are using) by declaring the font-family and text color. */
+
+h1, h2 {
+  font: var(--heading-font);
+  color: var(--primary-color);
+}
+/* Style some basic, consistent margin and padding declarations for the nav, paragraph, section, and article elements. */
+
+nav, p, section, article {
+  margin: 20px;
+  padding: 10px;
+}
+
+/* Remove the underlines from the social media image links in the footer. */
+/* This default underline on hyperlinks is considered to be visually distracting and unnecessary when applied to images as links. */
+
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* The descendant selector ( .socialmedia a ) only applies to anchor tags (a) that are children of elements with the socialmedia class and not to all anchor tags. */
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    padding: 20px;
+    left: 50%;
+    background: var(--accent1-color);
+    color: #f1faee;
+}
+
+.hero article {
+    position: absolute;
+    bottom: 30%;
+    width: 100px;
+    left: 10%;
+    color: #f1faee;
+}
+
