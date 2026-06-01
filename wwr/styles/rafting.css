@@ -17,7 +17,44 @@
 
 body {
     font: var(--body-font);
-    color: var(--accent2-color);
+    color: var(--accent1-color);
+}
+
+/* I should maybe have header, main, footer together. But let first remove last two */
+header {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  max-width: 840px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* I have added */
+.grid {
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr;
+  align-items: center;
+  grid-gap: 10px;
+  max-width: 840px;
+  text-align: center;
+}
+
+/* I have added this navigation */
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--secondary-color);
+  width: 500px;
+  padding: 1rem;
+} 
+
+nav a {
+  width: 500px;
+  color: var(--accent1-color);
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
 }
 
 /* Limit the page width by combining the header, main, and footer elements and center the content on the display using an auto left-right margin. */
@@ -26,52 +63,82 @@ body {
 
 /* Style the headings (all or just those you are using) by declaring the font-family and text color. */
 
+/* I added header img */
+header img {
+  width: 120px;
+}
+
 h1, h2 {
-  font: var(--heading-font);
+  font-family: var(--heading-font);
   color: var(--primary-color);
 }
 /* Style some basic, consistent margin and padding declarations for the nav, paragraph, section, and article elements. */
 
 nav, p, section, article {
-  margin: 20px;
+  margin: 10px;
   padding: 10px;
 }
 
-/* Remove the underlines from the social media image links in the footer. */
-/* This default underline on hyperlinks is considered to be visually distracting and unnecessary when applied to images as links. */
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-/* The descendant selector ( .socialmedia a ) only applies to anchor tags (a) that are children of elements with the socialmedia class and not to all anchor tags. */
-
 .hero {
-    position: relative;
-}
-
-.hero img {
-    display: block;
-    width: 200px;
-    height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;  
+  align-items: center;
+  gap: 10px;
 }
 
 .hero h1 {
-    position: absolute;
-    top: 50%;
-    width: 100px;
-    padding: 20px;
-    left: 50%;
-    background: var(--accent1-color);
-    color: #f1faee;
+  grid-column: 2 / 3;         
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero img {
+  grid-column: 2 / 3;
+  width: 300px;
+  height: auto;
 }
 
 .hero article {
-    position: absolute;
-    float: right;
-    bottom: 30%;
-    width: 100px;
-    left: 10%;
-    color: var(--secondary-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; 
+  align-items: center;
+  gap: 20px;
+}
+
+section h2 {
+  grid-column: 2 / 3;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* I added this footer */
+footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1px;
+  background-color: var(--secondary-color);
+}
+
+footer p {
+  margin: 0;
+  color: var(--accent2-color);
+}
+
+.socialmedia a {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 100px;
+  height: auto;
+}
