@@ -1,0 +1,32 @@
+header {
+    border-top: 1px solid black;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* je mets les sections dans un box */
+section {
+    border: 1px solid #999;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+/* J'enleve les top marge de h2 */
+h2 {
+    margin-top: 0;
+}
+
+footer {
+    max-width: 800px;
+    margin: 0 auto;
+    border-top: 1px solid black;
+}

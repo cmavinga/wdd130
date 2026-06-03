@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #1d3557;   /* deep navy */
-  --secondary-color: #457b9d; /* muted blue */
-  --accent1-color: #a8dadc;   /* soft cyan */
-  --accent2-color: #f1faee;   /* off-white */
+  --primary-color: black;
+  --secondary-color: grey;
+  --accent1-color: rgb(4, 4, 4);
+  --accent2-color: #f1faee;
   --heading-font: "Time New Roman", sherif;
   --body-font: "Arial"
 }
@@ -13,132 +13,137 @@
   box-sizing: border-box;
 }
 
-/* Style the entire document body text content to use the body-font CSS variable. Also add a CSS declaration to set the text color for the content. */
-
 body {
-    font: var(--body-font);
-    color: var(--accent1-color);
-}
-
-/* I should maybe have header, main, footer together. But let first remove last two */
-header {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  align-items: center;
-  max-width: 840px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-/* I have added */
-.grid {
-  display: grid;
-  grid-template-columns: 100px 1fr 1fr 1fr;
-  align-items: center;
-  grid-gap: 10px;
-  max-width: 840px;
-  text-align: center;
-}
-
-/* I have added this navigation */
-nav {
-  display: flex;
-  justify-content: flex-end;
-  background-color: var(--secondary-color);
-  width: 500px;
-  padding: 1rem;
-} 
-
-nav a {
-  width: 500px;
+  font: var(--body-font);
   color: var(--accent1-color);
-  display: block;
-  padding: 0.5rem;
+}
+
+div,
+section,
+footer {
+  border: 1px solid #999;
+  border-top: 1px solid black;
+  padding: 50px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+header {
+  border: 1px solid #999;
+  border-top: 1px solid black;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  background-color: rgba(203, 130, 216, 0.147);
+}
+
+header .grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  justify-self: end;
+}
+
+header nav a {
+  margin-left: 2rem;
+  color: var(--accent1-color);
   text-decoration: none;
+  border: 1px solid black;
 }
 
-/* Limit the page width by combining the header, main, and footer elements and center the content on the display using an auto left-right margin. */
-
-/* This CSS selector header, main, footer { targets three different HTML elements simultaneously by using a comma to specify each of these child elements of the document body. */
-
-/* Style the headings (all or just those you are using) by declaring the font-family and text color. */
-
-/* I added header img */
-header img {
-  width: 120px;
-}
-
-h1, h2 {
+h1,
+h2 {
   font-family: var(--heading-font);
   color: var(--primary-color);
-}
-/* Style some basic, consistent margin and padding declarations for the nav, paragraph, section, and article elements. */
-
-nav, p, section, article {
-  margin: 10px;
-  padding: 10px;
 }
 
 .hero {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;  
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
   align-items: center;
-  gap: 10px;
 }
 
 .hero h1 {
-  grid-column: 2 / 3;         
+  grid-column: 1 / -1;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .hero img {
-  grid-column: 2 / 3;
-  width: 300px;
+  width: 200px;
   height: auto;
 }
 
 .hero article {
   display: flex;
   align-items: center;
+  text-align: justify;
   gap: 10px;
 }
 
-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
-  align-items: center;
-  gap: 20px;
+.history {
+  background-color: #faf9f9;
 }
 
-section h2 {
-  grid-column: 2 / 3;
+.history h2 {
   text-align: center;
-  margin-bottom: 20px;
 }
 
-/* I added this footer */
+.history-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  text-align: justify;
+  border: none;
+}
+
+.history img {
+  width: 200px;
+  height: auto;
+}
+
+.gallery {
+  background-color: #faf9f9;
+}
+
+.gallery h2 {
+  text-align: center;
+  padding: 1rem;
+}
+
+figure {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1fr;
+}
+
+figure img {
+  justify-content: center;
+  align-items: flex-end;
+  width: 100px;
+  height: auto;
+}
+
 footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
-  padding: 1px;
-  background-color: var(--secondary-color);
-}
-
-footer p {
-  margin: 0;
-  color: var(--accent2-color);
+  padding: 1rem 2rem;
+  background-color: rgba(203, 130, 216, 0.147);
 }
 
 .socialmedia a {
-  display: flex;
-  gap: 10px;
   text-decoration: none;
 }
 
 .socialmedia img {
-  width: 100px;
+  width: 50px;
   height: auto;
 }
