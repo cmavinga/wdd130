@@ -151,3 +151,7 @@ footer {
   width: 50px;
   height: auto;
 }
+
+.team {
+  display: flex;
+}
