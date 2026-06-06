@@ -1,0 +1,337 @@
+<!-- THE STRUCTURE OF MY HTML PAGE CAN BE BUILT FROM HTML5 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Whitewater Rafting Company</title>
+  <meta name="description"
+    content="Contact our Whitewater Rafting Company for inquiries, bookings, or more information about our exciting river adventures.">
+  <meta name="author" content="Christian MAVINGA">
+  <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+
+<!-- # Before building an HTML It is very important to understand 
+# the layout of what I want to write.
+
+# The contact.html for example has 5 main sections: 
+# 1.Header (logo + navigation) 
+# 2.Company Contact Info (title + address) 
+# 3.Main Section (2 columns) 
+# -Left → map 
+# -Right → contact form 
+# 4.Team Section (employee profiles) 
+# 5.Footer
+
+# Start with structure only (no styling yet).
+# ✅ Think like this: -->
+
+<!-- <body> -->
+
+<!-- 1. Header -->
+
+<!-- 2. Company info -->
+
+<!-- 3. Main section (2 columns) -->
+
+<!-- 4. Team section -->
+
+<!-- 5. Footer -->
+
+<!-- </body> -->
+
+
+<!-- # ✅ Now implement each part
+
+# 🔷 1. HEADER (Same on all pages)
+# Copy from my about.html pages -->
+<!-- REMEMBER THE HEADER, MAIN AND FOOTER ARE IN THE BODY -->
+
+<body>
+
+  <header>
+    <div class="grid">
+      <img src="images/logo.webp" alt="wwr company logo" width="200" height="100">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="trips.html">Trips</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🔷 2. COMPANY INFORMATION (IN THE MAIN PART OF THE PAGE)
+From the contact.html wireframe I have:
+
+Title: White Water Rafting Company
+Address
+Email
+Phone -->
+
+  <main>
+    <section>
+      <h1>White Water Rafting Company</h1>
+      <p>123 Main Street</p>
+      <p>Kolob, California</p>
+      <p>+1 999 999 9999</p>
+      <p>info@whitewater.com</p>
+    </section>
+
+    <!-- NOTE BEFORE CONTINUING!!!! -->
+
+    <!-- ✅ 1. What is a <section>?
+  👉 Simple definition:
+  A <section> is a meaningful group of content
+    👉 Unlike <div>, it has semantic meaning.
+
+      ✅ Example: -->
+    <!-- <section>
+  <h2>Contact Information</h2>
+  <p>123 Main Street</p>
+</section> -->
+    <!-- 👉 This tells the browser: “This part is about contact information” -->
+
+    <!-- ✅ 1. What is a <div>?
+  👉 Simple definition:
+  A <div> is a container used to group elements together.
+    👉 It has no meaning by itself (no semantic meaning).
+    It’s mainly used for:
+
+    Layout (positioning things)
+    Styling with CSS
+
+    ✅ Example: -->
+    <!-- <div class="form">
+      <label>Name</label>
+      <input type="text">
+    </div> -->
+
+    <!-- 👉 Here:
+The <div> groups the label and input
+I can style them together in CSS
+
+✅ Why <div> is important:
+
+    Helps you organize your page
+    Allows you to apply CSS to groups
+    Useful for layouts (columns, boxes, sections) -->
+
+    <!-- NOW COMING BACK TO MY HTML -->
+
+    <!-- 🔷 3. MAIN SECTION (Important part)
+👉 In this html it is a two-column layout -->
+
+    <main class="contact-container">
+
+      <!-- Left side -->
+      <div class="map">
+        <img src="images/nilerivermap.jpg" alt="Nile River Map">
+      </div>
+
+      <!-- Right side -->
+      <div class="form">
+        <form>
+          <label for="username">Name</label>
+          <input type="text" id="username" name="username" placeholder="username">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="email">
+          <p>Message Purpose</p>
+          <label>
+            <input type="radio" name="purpose"> General Inquiry
+          </label>
+          <label>
+            <input type="radio" name="purpose"> Reservation Question
+          </label>
+          <label>
+            <input type="radio" name="purpose"> Website Suggestion
+          </label>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type here"></textarea>
+          <label><input type="checkbox" id="newsletter" name="newsletter">Please subscribe me to
+            the monthly newsletter"</label>
+          <button type="submit">Get in touch!</button>
+        </form>
+      </div>
+
+      <!-- 🔷 5. TEAM SECTION
+From my contact.html wireframe we should have h2 & 3 img:
+→ "We Are Here to Serve You"
+→ 3 employee profiles -->
+
+      <section>
+        <h2>We Are Here to Serve You</h2>
+
+        <div class="team">
+          <div class="employee">
+            images/profile1.png
+            <p>Employee Profile</p>
+          </div>
+
+          <div class="employee">
+            images/profile2.png
+            <p>Employee Profile</p>
+          </div>
+
+          <div class="employee">
+            images/profile3.png
+            <p>Employee Profile</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 🔷 6. FOOTER (Same on all pages) 
+      So, I have to copy from an existing page of this same work. -->
+    <!-- REMEMBER:FOOTER IS IN THE BODY BUT OUTSIDE MAIN. -->
+    <footer>
+      <p>©2026 🌴 Mavinga Nsuka Christian 🌴 Whitewater Rafting Company</p>
+      <nav class="socialmedia">
+        <a href="https://facebook.com">
+          <img src="images/facebook.jpg" alt="Facebook">
+        </a>
+        <a href="https://instagram.com">
+          <img src="images/instagram.jpg" alt="Instagram">
+        </a>
+        <a href="https://LinkedIn.com">
+          <img src="images/linkendin.jpg" alt="LinkedIn">
+        </a>
+      </nav>
+    </footer>
+</body>
+
+</html>
+
+<!-- Div vs Sections
+
+👉 Simple rule:
+
+Use <section> → for content
+Use <div> → for layout and styling -->
+
+<!-- ✅ 3. What is <main>?
+  👉 Simple definition:
+  <main> contains the main content of the page
+    👉 Everything important goes inside <main>
+
+      ✅ Example: -->
+
+<main>
+  <!-- main content here -->
+</main>
+
+<!-- ✅ 4. What can go inside <main>?
+  Inside <main>, you can include:
+    ✅ Common elements:
+
+    <section>
+    <div>
+    <article>
+    <form>
+    <h1>, <h2>
+    <p>, <img> -->
+
+✅ 5. How do you decide what to use?
+This is the most important part 👇
+
+🎯 Think like this:
+✅ Step 1: Ask → “What is this part?”
+
+<!-- A meaningful part of content? → ✅ <section> -->
+<!-- Just for layout/design? → ✅ <div> -->
+
+🟢 Contact form area
+👉 It’s a logical block → use <section>
+  Inside it:
+
+  Use <div> to create columns
+
+
+    🟢 Map and form side-by-side
+    👉 This is layout → use <div>
+
+      ✅ 6. Easy Rule to Remember
+      👉 Use this simple logic:
+
+      Page structure → <main>
+        Content blocks → <section>
+          Layout/styling → <div>
+
+
+            ✅ 7. Visual analogy (helps a lot)
+            Think of your page like a house:
+
+            <main> = the house
+              <section> = rooms (living room, kitchen)
+                <div> = furniture arrangement inside the room
+
+
+                  ✅ ✅ Final simple answer (for your assignment)
+
+                  A <div> is a container used to group elements for layout and styling, while
+                    a <section> is used to group related content with a specific meaning. The
+                      <main> element contains the primary content of the page, and it can
+                        include sections, divs, forms, headings, and other elements. To decide
+                        which to use, we use <section> for meaningful content areas and <div>
+                            for layout and design purposes.
+
+                            <!-- CSS 
+NOW WE NEED TO LAYOUT. -->
+
+                            FOR TWO COLUMN LAYOUT DO : <!-- ✅ 1. Two-column layout -->
+                            <!-- .contact-container {
+ display: flex;
+ gap: 20px;
+ } -->
+
+                            ✅ 2. Form styling
+                            form {
+                            display: flex;
+                            flex-direction: column;
+                            }
+
+                            ✅ 3. Team section layout
+                            .team {
+                            display: flex;
+                            justify-content: space-around;
+                            }
+
+                            ✅ 4. Basic spacing
+                            .team section {
+                            margin: 20px;
+                            }
+
+                            If I want to use Grid and want to align title and images
+                            The title on top, center and images align horizontally:
+                            I assign grid to the parent container:
+                            EX:
+                            .gallery {
+                            display: grid;
+                            grid-template-columns: repeat(5, 1fr);
+                            gap: 1fr;
+                            background-color: var(--accent2-color);
+                            }
+
+                            If the title is part of the grid, it will be pushed somewhere.
+                            To take it on top, center:
+
+                            .gallery h2 {
+                            grid-column: 1 / -1; (Makes the title span all the column)
+                            text-align: center;
+                            padding: 1rem;
+                            }
+
+                            figure {
+                            text-align: center;
+                            /* display: grid;
+                            grid-template-columns: repeat(5, 1fr);
+                            gap: 1fr; */
+                            }
+
+                            figure img {
+                            width: 100px;
+                            height: auto;
+                            }

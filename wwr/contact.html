@@ -1,3 +1,5 @@
+<!-- THE STRUCTURE OF MY HTML PAGE CAN BE BUILT FROM HTML5 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +13,45 @@
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
+
+<!-- # Before building an HTML It is very important to understand 
+# the layout of what I want to write.
+
+# The contact.html for example has 5 main sections: 
+# 1.Header (logo + navigation) 
+# 2.Company Contact Info (title + address) 
+# 3.Main Section (2 columns) 
+# -Left → map 
+# -Right → contact form 
+# 4.Team Section (employee profiles) 
+# 5.Footer
+
+# Start with structure only (no styling yet).
+# ✅ Think like this: -->
+
+<!-- <body> -->
+
+<!-- 1. Header -->
+
+<!-- 2. Company info -->
+
+<!-- 3. Main section (2 columns) -->
+
+<!-- 4. Team section -->
+
+<!-- 5. Footer -->
+
+<!-- </body> -->
+
+
+<!-- # ✅ Now implement each part
+
+# 🔷 1. HEADER (Same on all pages)
+# Copy from my about.html pages -->
+<!-- REMEMBER THE HEADER, MAIN AND FOOTER ARE IN THE BODY -->
+
 <body>
+
     <header>
         <div class="grid">
             <img src="images/logo.jpg" alt="wwr company logo" width="200" height="100">
@@ -23,75 +63,148 @@
             </nav>
         </div>
     </header>
+
+    <!-- 🔷 2. COMPANY INFORMATION (IN THE MAIN PART OF THE PAGE)
+From the contact.html wireframe I have:
+
+Title: White Water Rafting Company
+Address
+Email
+Phone -->
+
     <main>
         <section>
             <h1>White Water Rafting Company</h1>
-            <p>123 Main River Street</p>
+            <p>123 Main Street</p>
             <p>Kolob, California</p>
             <p>+1 999 999 9999</p>
             <p>info@whitewater.com</p>
         </section>
-        <div>
-            <form>
-                <label for="username">Name</label>
-                <input type="text" id="username" name="username">
-            </form>
-            <form>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-            </form>
-            <form>
-                <label>Message Purpose</label>
-                <input type="radio">
-                <option>General Inquiry</option>
-                <option>Reservation Question</option>
-                <option>Website Suggestion</option>
-            </form>
-            <form>
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5"></textarea>
-            </form>
-            <label><input type="checkbox" id="newsletter" name="newsletter">Please subscribe me to
-                the monthly newsletter"</label>
-            <button type="submit">Get in touch!</button>
-            <figure>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31826.4907289334!2d15.254589199999998!3d-4.35257405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2scd!4v1780699450045!5m2!1sfr!2scd"
-                  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </figure>
-        </div>
-        <div class="team">
-            <h2>We are here to serve you</h2>
-            <figure>
-                <img src="images/africanwwr.webp" alt="employee1">
-                <figcaption>Employee 1</figcaption>
-            </figure>
-            <figure>
-                <img src="images/africanwwr.webp" alt="employee2">
-                <figcaption>Employee 2</figcaption>
-            </figure>
-            <figure>
-                <img src="images/africanwwr.webp" alt="employee3">
-                <figcaption>Employee 3</figcaption>
-            </figure>
-        </div>
-    </main>
-    <footer>
-        <p>©2026 🌴 Mavinga Nsuka Christian 🌴 Whitewater Rafting Company</p>
-        <nav class="socialmedia">
-            <a href="https://facebook.com">
-                <img src="images/facebook.jpg" alt="Facebook">
-            </a>
-            <a href="https://instagram.com">
-                <img src="images/instagram.jpg" alt="Instagram">
-            </a>
-            <a href="https://LinkedIn.com">
-                <img src="images/linkendin.jpg" alt="LinkedIn">
-            </a>
-        </nav>
-    </footer>
 
+        <!-- NOTE BEFORE CONTINUING!!!! -->
+
+        <!-- ✅ 1. What is a <section>?
+  👉 Simple definition:
+  A <section> is a meaningful group of content
+    👉 Unlike <div>, it has semantic meaning.
+
+      ✅ Example: -->
+        <!-- <section>
+  <h2>Contact Information</h2>
+  <p>123 Main Street</p>
+</section> -->
+        <!-- 👉 This tells the browser: “This part is about contact information” -->
+
+        <!-- ✅ 1. What is a <div>?
+  👉 Simple definition:
+  A <div> is a container used to group elements together.
+    👉 It has no meaning by itself (no semantic meaning).
+    It’s mainly used for:
+
+    Layout (positioning things)
+    Styling with CSS
+
+    ✅ Example: -->
+        <!-- <div class="form">
+      <label>Name</label>
+      <input type="text">
+    </div> -->
+
+        <!-- 👉 Here:
+The <div> groups the label and input
+I can style them together in CSS
+
+✅ Why <div> is important:
+
+    Helps you organize your page
+    Allows you to apply CSS to groups
+    Useful for layouts (columns, boxes, sections) -->
+
+        <!-- NOW COMING BACK TO MY HTML -->
+
+        <!-- 🔷 3. MAIN SECTION (Important part)
+👉 In this html it is a two-column layout -->
+
+        <main class="contact-container">
+
+            <!-- Left side -->
+            <div class="map">
+                <img src="images/nilerivermap.jpg" alt="Nile River Map" width="200">
+            </div>
+
+            <!-- Right side -->
+            <div class="form">
+                <form>
+                    <label for="username">Name</label>
+                    <input type="text" id="username" name="username"
+                      placeholder="Christian Mavinga">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="mavingac5@gmail.com">
+                    <p>Message Purpose</p>
+                    <label>
+                        <input type="radio" name="purpose"> General Inquiry
+                    </label>
+                    <label>
+                        <input type="radio" name="purpose"> Reservation Question
+                    </label>
+                    <label>
+                        <input type="radio" name="purpose"> Website Suggestion
+                    </label>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5"
+                      placeholder="Type here"></textarea>
+                    <label><input type="checkbox" id="newsletter" name="newsletter">Please subscribe
+                        me to
+                        the monthly newsletter"</label>
+                    <button type="submit">Get in touch!</button>
+                </form>
+            </div>
+        </main>
+
+        <!-- 🔷 5. TEAM SECTION
+From my contact.html wireframe we should have h2 & 3 img:
+→ "We Are Here to Serve You"
+→ 3 employee profiles -->
+
+        <section>
+            <h2>We Are Here to Serve You</h2>
+
+            <div class="team">
+                <div class="employee">
+                    <img src="images/employeeprofile.jpg" alt="Employee Profile" width="100">
+                    <p>CEO</p>
+                </div>
+
+                <div class="employee">
+                    <img src="images/employeeprofile.jpg" alt="Employee Profile" width="100">
+                    <p>Travel Manager</p>
+                </div>
+
+                <div class="employee">
+                    <img src="images/employeeprofile.jpg" alt="Employee Profile" width="100">
+                    <p>Coordinator</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 🔷 6. FOOTER (Same on all pages) 
+      So, I have to copy from an existing page of this same work. -->
+        <!-- REMEMBER:FOOTER IS IN THE BODY BUT OUTSIDE MAIN. -->
+        <footer>
+            <p>©2026 🌴 Mavinga Nsuka Christian 🌴 Whitewater Rafting Company</p>
+            <nav class="socialmedia">
+                <a href="https://facebook.com">
+                    <img src="images/facebook.jpg" alt="Facebook">
+                </a>
+                <a href="https://instagram.com">
+                    <img src="images/instagram.jpg" alt="Instagram">
+                </a>
+                <a href="https://LinkedIn.com">
+                    <img src="images/linkendin.jpg" alt="LinkedIn">
+                </a>
+            </nav>
+        </footer>
 </body>
 
 </html>
