@@ -91,6 +91,10 @@ h2 {
   margin-left: 10px;
 }
 
+.hero img {
+  width: 100%;
+}
+
 .history {
   background-color: #faf9f9;
 }
@@ -164,11 +168,24 @@ footer {
   display: flex;
   gap: 50px;
   justify-self: center;
+  background-color: lightyellow;
 }
 
 .contact-container form {
   display: flex;
   flex-direction: column;
+}
+
+.contact-container a {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  background-color: navy;
+  color: var(--accent2-color);
+  font-size: x-large;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 35px;
 }
 
 .team {
@@ -192,4 +209,70 @@ section {
   justify-content: center;
   text-align: center;
   border: none;
+}
+
+.purpose {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  background-color: var(--accent2-color);
+}
+
+.purpose img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.contact {
+  margin: 0 auto;
+  padding: 5px;
+  text-align: center;
+  background-color: navy;
+  border-radius: 20px;
+}
+
+.contact a {
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+}
+
+.description {
+  display: flex;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.description-content {
+  margin: 5px;
+}
+
+.description-content img {
+  width: 150px;
+}
+
+.schedule {
+  margin-bottom: 10px;
+  padding: 0;
+  border: none;
+}
+
+table {
+  border: 2px solid rgb(140 140 140);
+  letter-spacing: 1px;
+  width: 800px;
+
+}
+
+th,
+td {
+  border: 1px solid rgb(150 150 150);
+  padding: 8px 12px;
+  text-align: center;
+}
+
+thead tr {
+  background-color: navy;
+  color: white;
+  font-weight: 700;
 }

@@ -1,0 +1,317 @@
+# MY NOTES ABOUT HTML AND CSS
+
+# Essential HTML Concepts
+
+""" 1. The following HTML elements are required
+for every HTML page created in this course """
+
+<!DOCTYPE html>
+
+# This is a required component at the very beginning of the page/document
+# to tell the browser what version of HTML is being used.
+
+# In the early days of the internet, there were different document types
+# that could define the rules required by a particular version. These days,
+# it is not as important because every HTML page you write will have it,
+# but you should have it on every page to make sure your page behaves
+# correctly.
+
+# ✔ This is a development checklist item.
+
+<html lang="en-US"> ...
+
+</html>
+
+# This element wraps all the content on the entire page, meaning that
+# everything else should be inside it. It is sometimes known as the root
+# element, because it is like the root of a tree that everything grows from.
+# It has a lang attribute to specify the primary language of the page.
+
+# ✔ This element, including the language, is also a development
+# checklist item.
+
+<head> ... </head>
+
+# The head element contains information about the page. The content from
+# this section is not displayed on the page itself, but instead, it is
+# made to be read by the computer to provide information information
+# (metadata) about the document, such as the character set, viewport
+# size, title, scripts, and style sheets.
+
+# ✔ This is a development checklist item.
+
+<meta charset="utf-8">
+
+# Located within the
+
+<head> element, the meta charset attribute defines
+  # the character encoding for the document, which means the way that the
+  # text is represented in the underlying binary data that the computer
+  # stores. In the past, various character encodings may be used for
+  # different languages, such as those that have accent marks or Chinese
+  # characters. HTML 5 (the current standard) requires "utf-8" for all
+  # HTML documents.
+
+  # ✔ This is a development checklist item.
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+  # Located within the
+
+  <head> element, the meta viewpoint attribute
+    # makes sure the page renders at correct width to prevent mobile
+    # browsers from rendering the page wider than they should and then
+    # shrinking them down.
+
+    # ✔ This is a development checklist item.
+
+    <title>...</title>
+
+    # Located within the
+
+    <head> element, the title element defines the
+      # title of your page, which will be displayed in the browser tab or
+      # when you bookmark a page.
+
+      # This title does not show up directly on the page itself, but it
+      # should closely match the content you include in the heading 1 <h1>
+        # element in the document
+
+    <body>.
+
+      # ✔ A title element with a meaningful title is a development checklist item.
+
+  <body> ... </body>
+
+  # The
+
+<body> element contains the main content of the HTML document.
+  # There can be only one body element in a document. It contains all
+  # the content that you want to show to web users when they visit your
+  # page, including text, images, videos, and anything else you want the
+  # user to see.
+
+  # ✔ This is a development checklist item.
+
+  """ 2. The basic anatomy, or the structure of the basic tags, of an HTML
+  document? """
+
+
+  <!DOCTYPE html>
+  <html lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Relevant Document Title</title>
+  </head>
+
+  <body>
+  </body>
+
+  </html>
+
+  # WE CAN ADD SOME IMPORTANT ELEMENTS:
+
+  <!DOCTYPE html>
+  <html lang="en-US">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Basic HTML Structure</title>
+    <meta name="description" content="A basic HTML structure example using semantic HTML elements">
+    <meta name="author" content="Xavier Rodriquez">
+    <link rel="stylesheet" href="styles/styles.css"> # links your html page to a css (styling)
+  </head>
+
+  <body>
+
+  </body>
+
+  </html>
+
+  """ 3.Using the following example HTML snippet of code, what are the
+  definitions of each of the numbered parts listed below? """
+
+  # <p>A paragraph containing a hyperlink to <a href="https://www.byupathway.edu">BYU Pathway</a>.
+  </p>
+
+  # Answers
+  # <p> This is the opening or start tag of a paragraph element.
+    # </p> the closing or end tag of a paragraph element.
+  # href is the attribute. The value of this href attribute, https://www.byupathway.edu, specifies
+  the
+  # anchor <a> tag's destination, or the place you will go if you click the link.
+    # "A paragraph containing a hyperlink to BYU Pathway Worldwide." This is the content of the
+    paragraph element.
+    # The entire snippet: An HTML paragraph Element that contains text and a hyperlink.
+
+    """ 4. Why do some elements, such a <img> not contain a closing tag? """
+
+    # These tags are called void elements, or self closing tags. They do not require a closing tag,
+    # because you can never include anything inside of them—all of the necessary information is
+    # provided by attributes.
+
+    # In the past, sometimes these self-closing tags were written with a slash at the end, s
+    # uch as: <img />. But the current recommendation on the Web is to NOT include a closing slash.
+
+    # The following is a correct example of a self-closing image tag:
+
+    # <img src="images/sample.png" alt="A sample image">
+    # In
+
+    """ HTML Semantic Elements """
+
+    """
+
+    HTML describes the structure of a web page. The structure is composed of various categories of
+    elements.
+    Some elements are associated with forms and tabular data.
+
+    HTML elements have a specific meaning and are used to structure the content of a web page,
+    but not to style the page. They are used to clearly provide meaning to the browser and
+    developer.
+    Later, once the html structure is in place, you will use styles (CSS) to adjust the way the page
+    is
+    shown to the user.
+
+    Semantic and Non-Semantic HTML Tags
+
+    HTML tags can be divided into two main categories: semantic tags and non-semantic tags.
+    Understanding the difference between these types of tags will help you write better web
+    pages that are easier to understand and maintain.
+
+    Semantic tags have meaning built into their name. They tell both the browser and other
+    developers
+    what type of content they contain.
+    When you read the tag name, you can understand what kind of information is inside.
+    These tags make your HTML code easier to read and help screen readers assist people
+    with visual impairments.
+
+    Non-semantic tags do not have specific meaning about their content. They are used mainly for
+    styling
+    and layout purposes.
+
+    What Are Semantic Tags?
+
+    header: Contains introductory content or navigation links
+    nav: Contains navigation links to other pages or sections
+    main: Contains the main content of the page
+    section: Represents a distinct section of content
+    article: Contains independent, self-contained content
+    aside: Contains content that is related but separate from the main content
+    footer: Contains closing information like contact details or copyright
+    h1, h2, h3, h4, h5, h6: Represent different levels of headings
+
+    Here is an example of semantic tags used to structure a simple web page:
+
+    <!DOCTYPE html>
+    <html>
+
+    <head>
+      <title>My Blog</title>
+    </head>
+
+    <body>
+      <header>
+        <h1>Welcome to My Blog</h1>
+        <nav>
+          <a href="home.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </header>
+
+      <main>
+        <article>
+          <h2>My First Blog Post</h2>
+          <p>This is the content of my blog post.</p>
+        </article>
+      </main>
+
+      <footer>
+        <p>Copyright 2024 My Blog</p>
+      </footer>
+    </body>
+
+    </html>
+
+
+    Non-Semantic Tags?
+    The two most common:
+
+    div: A container used for grouping and styling a section of a page
+    span: A container used for styling small portions of text
+
+    Here is an example showing how non-semantic tags are used:
+
+    <div class="container">
+      <div class="sidebar">
+        <p>This is sidebar content</p>
+      </div>
+
+      <div class="content">
+        <p>This paragraph has a <span class="highlight">highlighted word</span> in it.</p>
+      </div>
+    </div>
+
+    When to Use Each Type
+
+    Use semantic tags whenever possible because they make your code more meaningful and accessible.
+    Use semantic tags when the content has a specific purpose or meaning, such as navigation, main
+    content, or article text.
+
+    Use non-semantic tags when you need to group elements for styling purposes but the content does
+    not have a specific semantic meaning. For example, use a div to create a colored background area
+    or use a span to change the color of a few words.
+
+    Many web sites contain older HTML constructs like <div id="header"> or <div id="navigation">.
+        These older sites are using the generic, non-semantic tags, but try to add meaning through
+        the
+        id. You should not use this approach. Instead, use the semantic HTML tags, <header> or <nav>
+            tags.
+
+            Also, because the semantic tags already describe the meaning, you do not need to add
+            extra ids or
+            classes to these tags. Do not use <header id="header"> or <header class="header"> which
+                is
+                unnecessary and redundant.
+                """
+
+                """
+                HTML Heading Tags (h1–h6):
+
+                📑 Purpose of Heading Tags
+                Define titles and section headers on a webpage.
+
+                Organize content for readability and structure.
+
+                Help search engines understand importance and hierarchy.
+
+                🔢 The Six Tags
+                h1: Main title (use only once per page).
+
+                h2: Major section headings.
+
+                h3: Subsections under h2.
+
+                h4: Minor headings under h3.
+
+                h5: Very specific content areas.
+
+                h6: Smallest heading, rarely used.
+
+                📐 How to Use Them
+                Follow order: h1 → h2 → h3 → h4 → h5 → h6.
+
+                Do not skip levels (e.g., do not jump from h2 to h5).
+
+                ⚠️ Why Order Matters
+                Skipping levels confuses screen readers (used by visually impaired users).
+                Proper hierarchy improves accessibility and SEO (Search Engine Optimization).
+                Ensures content is easy to navigate and understand.
+
+                👉 In short: Use headings like an outline—start broad with h1, then narrow down step
+                by step.
+                """
