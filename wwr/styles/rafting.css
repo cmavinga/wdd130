@@ -69,10 +69,12 @@ h2 {
 
 .hero h1 {
   position: absolute;
+  width: 50%;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  opacity: 0.7;
   background-color: var(--primary-color);
   color: var(--accent1-color);
 }
@@ -134,7 +136,7 @@ h2 {
   grid-column: 1 / -1;
   text-align: center;
   padding: 1rem;
-  --secondary-color: grey;
+  color: var(--secondary-color);
 }
 
 figure {
